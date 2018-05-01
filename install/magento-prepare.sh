@@ -23,7 +23,7 @@ if [ $1 ] && [ $2 ] && [ $3 ] && [ $4 ];
         chmod u+x bin/magento
 
         SITE=/etc/nginx/sites-available/$2
-        curl https://raw.githubusercontent.com/Jayant1/magento2-server-configuration/tree/master/config/nginx-site > $SITE
+        curl https://raw.githubusercontent.com/Jayant1/magento2-centos-installation/master/config/nginx-site > $SITE
 
         sed -i -e "s/mywebshop.com/$2/g" $SITE
         ln -s /etc/nginx/sites-available/$2 /etc/nginx/sites-enabled/
