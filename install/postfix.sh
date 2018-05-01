@@ -9,7 +9,7 @@ if [ $1 ];
            
         echo "root,www-data   info@$1" >> /etc/postfix/virtual
 
-        curl https://github.com/Jayant1/magento2-server-configuration/blob/master/config/postfix-config > /etc/postfix/main.cf
+        curl https://raw.githubusercontent.com/Jayant1/magento2-centos-installation/master/config/postfix-config > /etc/postfix/main.cf
         sed -i -e "s/mywebshop.com/$1/g" /etc/postfix/main.cf
 
         postmap /etc/postfix/virtual
